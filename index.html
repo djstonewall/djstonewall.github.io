@@ -15,6 +15,16 @@
 </head>
 <body id="myPage">
 
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=2021684071388322&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!-- Sidebar on click -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
@@ -88,8 +98,10 @@
 			10pm to 3am</p>
 		
 	<!-- LikeBtn.com BEGIN -->
-		<span class="likebtn-wrapper" data-theme="custom" data-icon_d="str2-o" data-identifier="item_1"></span>
-		<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+	<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" \
+	     data-layout="button_count" data-action="like" data-size="small" \
+	     data-show-faces="true" data-share="true">
+	</div>
 	<!-- LikeBtn.com END -->	
 		
 	
